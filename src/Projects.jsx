@@ -1,8 +1,15 @@
 import React from 'react';
+import ProjectCard from './ProjectCard.jsx';
 
 const Projects = () => (
   // FIXME: THIS IS JUST A TEST
-  <h1>THIS IS JUST A TEST PAGE</h1>
+  <div>
+    <ProjectCard />
+    <ProjectCard />
+    <ProjectCard />
+    <ProjectCard />
+    <ProjectCard />
+  </div>
 );
 
 export default Projects;
