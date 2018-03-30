@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "title": "someTitle",
+      "description": "description",
+      "url": "URLWhereItIsHosted",
+      "githubURL": "githubURL",
+      "id": "idnumber",
+      "writeup": "longWriteup"
+    },
+    {
+      "title": "Shared Canvas",
+      "description":
+        "A online paint style app, where everyone has the same canvas to paint on",
+      "url": "Sharecanv.us",
+      "githubURL": "githubURL",
+      "id": "sharedcanvas",
+      "writeup":
+        "From a technical standpoint it isn't super complex. A user has a canvas that they modify with jquery scripts. When they make a change to the canvas they send an update to the server that this server then passes on to the other clients. The timer is client side. The data is an key value pairing of randomly generated alphabetical keys that are both uppercase and lowercase with a total length of 4 digits. This leads to the chance of a collision being 1 in 52^4 or a really big number. Plannned updates: Room functionality, someone can create a room that they then have invite and admin priveges over. This allows for people to doodle with their friends and customize the settings of a room. The timer will move to server side. Athentication will be built out. Periodic wipes of rooms will happen along with periodic resets of the main canvas. Finally the canvas will be translated into an image format and provided to the users on first load rather than just being a data set that gets innefficiently sent over websockets"
+    }
+  ]
+}

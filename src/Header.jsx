@@ -1,32 +1,29 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
-import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 
-const Header = (props: { left: Function, title: Function }) => {
+const undoLinkStyling = {
+  textDecoration: 'none',
+  color: 'inherit'
+};
+
+const Header = (props: { left: Function, history: Any }) => {
   return (
     <div>
       <AppBar
         zDepth={3}
         style={{ position: 'fixed' }}
-        title="ImIzaac"
+        title={
+          <Link to="/" style={undoLinkStyling}>
+            ImIzaac
+          </Link>
+        }
         onLeftIconButtonClick={props.left}
-        onTitleClick={props.title}
       />
       <Toolbar />
     </div>
   );
-  {
-    /* <Link to="/Projects">Projects </Link>*/
-  }
-
-  {
-    /* <Link to="/Social">Social </Link>*/
-  }
-
-  {
-    /* <Link to="/Inquiries">Inquiries</Link> */
-  }
 };
 
 export default Header;

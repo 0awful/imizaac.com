@@ -1,19 +1,7 @@
 import React from 'react';
-import {
-  Card,
-  CardHeader,
-  CardMedia,
-  CardTitle,
-  CardText
-} from 'material-ui/Card';
+import { Card, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
-import {
-  Toolbar,
-  ToolbarGroup,
-  ToolbarSeparator,
-  ToolbarTitle
-} from 'material-ui/Toolbar';
-import Tabs from 'material-ui/Tabs';
+import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 
 const cardStyles = {
   display: 'inline-block',
@@ -59,28 +47,8 @@ const ProjectCard = props => (
         <ToolbarGroup lastChild={true} style={groupStyles}>
           <RaisedButton label="Project" primary={true} fullWidth={true} />
         </ToolbarGroup>
-      </Toolbar>*/
+      </Toolbar>
     </CardText>
-
-    {/*  <CardActions>
-      <FlatButton label="Action!" />
-      <FlatButton label="Action!" />
-      <FlatButton label="Action!" />
-    </CardActions>
-
-
-    <Toolbar style={toolbarStyles}>
-      <ToolbarGroup firstChild={true}>
-        <RaisedButton label="Code" primary={true} />
-      </ToolbarGroup>
-
-      <ToolbarGroup>
-        <RaisedButton label="Writeup" primary={true} />
-      </ToolbarGroup>
-      <ToolbarGroup lastChild={true}>
-        <RaisedButton label="Project" primary={true} />
-      </ToolbarGroup>
-    </Toolbar>*/}
   </Card>
 );
 
