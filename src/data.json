@@ -46,58 +46,26 @@
         "The idea was simple; a living resume and portfolio. The implementation was built around a couple ideas. First I wanted to use React. That's because I just completed Brian Holt's class on React and I needed something to build with react. Next I wanted my page to be worth showing off. I could do it with squarespace, with html, css, js, wordpress, and all manner of things, but a SPA feels different. I wanted to present that feeling. Finally I wanted it to look good, and that is something I know I can do with react. Using the library Material-UI published by google I was able to get some shortcuts in some areas. Using CSS I was able to solve rendering problems. The project cards have a challenge of rending the right number of them in the right positions. If you just float them they don't reduce the number rendering properly and they also are not centered. Both of these things aren't acceptable UI. I solved this with css grids and a @media query to set the right number of them based upon screen size. There was a rendering problem that would occur when a user opened the writeup window. When you opened it all the other items on the screen would move. This was very ugly and bothered me a lot. I solved this with some CSS magic."
     },
     {
-      "title": "someTitle",
-      "subtitle": "this is the subtitle",
-      "description": "description",
-      "url": "URLWhereItIsHosted",
-      "codeurl": "githubURL",
-      "id": "idnumber4",
-      "writeup": "longWriteup"
+      "title": "Binance Auto Trader",
+      "subtitle": "An algorithm that automatically trades cryptocurrencies",
+      "description":
+        "An automated index fund build upon the binance cryptocurrency exchange. It allows for a user to automatically balance all of their funds to have the same monitary value",
+      "url": "https://github.com/imizaac/BinanceAutoTrader",
+      "codeurl": "https://github.com/imizaac/BinanceAutoTrader",
+      "id": "BinanceAutoTrade",
+      "writeup":
+        "The fundamental investment strategy is to create an index fund. In the cryptocurrency space this does not exist. So I made it. It is actually really simple, but it has some interesting challenges. First you need to get the balances of your account, the price values of the currencies, and the requirements of the market. Then you need to calculate what you need to sell and what you need to buy. Then you need to execute your orders. It makes most sense to execute your sell orders first and then your buy orders finally resulting in a balanced portfolio. This project was never intended to be made public and has not been changed since I added it to the site so what you are seeing here is my code as I wrote it for my eyes only. The interesting challenge of the project is assigning a real value to the coins. First everything is on multiple exchanges, they are on the BTC exchange, the ETH exchange, and some are on the LTC, USDT and BNB exchanges. This means that they have between 2 and 4 prices. Which has an opperturnity for arbitrage. If you are interested in this I invite you to look at my Binance Arbitrage algorithm which works on this area. The second problem with pricing is stocks and cryptos don't have one price. They have a buy and a sell price. If you are looking for an instant atomic pairing of events you are going to end up with conflicting values you can only evaluate your personal worth in terms of your sell price, as this is what you will capitalize on, next you will buy at the buy price and the end result is a loss. Why would you want to do this then? The assumption is that all prices are pseudo random numbers but on average the value is either constant or increasing. This means that you are buying items at a relative low and selling at a relative high. Despite the loss I theorized that this would generate a profit. I was right, but that may have been the territory as I entered the market just before a crazy bull run and I exited just before the market turned bearish. This project taught me a lot about handling API calls. First thing first with APIs are that you have to follow their rules. You make a request when they let you make a request. No more often. Next you make a request how they require you to make a request. In my circumstance that meant that I had to strictly present numbers within a certain range. This was not universal to all coins and therefore I had to handle large configuration files that could theoretically change at any time and had to be pulled every time I ran the algorithm. It forced me to build my algorithm in a functional style and make no assumption about the rules of the api. Finally I had to work heavily with promises. This was a pain at first but now I really like them. Who would have thought that using a million promises would make you okay with them."
     },
     {
-      "title": "someTitle",
-      "subtitle": "this is the subtitle",
-      "description": "description",
-      "url": "URLWhereItIsHosted",
-      "codeurl": "githubURL",
-      "id": "idnumber5",
-      "writeup": "longWriteup"
-    },
-    {
-      "title": "someTitle",
-      "subtitle": "this is the subtitle",
-      "description": "description",
-      "url": "URLWhereItIsHosted",
-      "codeurl": "githubURL",
-      "id": "idnumber6",
-      "writeup": "longWriteup"
-    },
-    {
-      "title": "someTitle",
-      "subtitle": "this is the subtitle",
-      "description": "description",
-      "url": "URLWhereItIsHosted",
-      "codeurl": "githubURL",
-      "id": "idnumber7",
-      "writeup": "longWriteup"
-    },
-    {
-      "title": "someTitle",
-      "subtitle": "this is the subtitle",
-      "description": "description",
-      "url": "URLWhereItIsHosted",
-      "codeurl": "githubURL",
-      "id": "idnumber8",
-      "writeup": "longWriteup"
-    },
-    {
-      "title": "someTitle",
-      "subtitle": "this is the subtitle",
-      "description": "description",
-      "url": "URLWhereItIsHosted",
-      "codeurl": "githubURL",
-      "id": "idnumber9",
-      "writeup": "longWriteup"
+      "title": "Binance Arbitrage",
+      "subtitle": "Executing Real Time Arbitrage",
+      "description":
+        "Using websockets and monitoring numerous routes I try to make money from nothing",
+      "url": "https://github.com/imizaac/BinanceArbitrage/",
+      "codeurl": "https://github.com/imizaac/BinanceArbitrage/",
+      "id": "BinanceArbitrage",
+      "writeup":
+        "Money for nothing. That was the goal. Arbitrage is profiting off of a price imbalance. If something somewhere is too cheap you buy it and sell it at a profit. My opportunity is Binance. Binance prices cryptocurrency in multiple markets. BTC, ETH, BNB, LTC, and USDT. In theory you could move money through the markets because of this. Starting on one exchange you make a buy order, then make two sell orders to end up where you started with a larger sum of money. Before I set out on this I needed to know that it would be profitable. I set up my computer monitoring the markets and theortically acting on routes. I found that over a 24 hour period there were tens of thousands of dollars in possible transactions that you could take to make money. It was amazing I was only monitoring one possible trade. This was the easiest money I had ever seen. I only wondered why nobody had done this before. My system was simple. Subscribe to websocket data from multiple coins and create all possible routes between them. Whenever a coin changes in price, if it would make a route more profitable, recalculate that route. This prevented unnessecary computation which in theory would allow for the tranactions to be acted on quicker. Next you have money sitting in all the coins on a route. That way you can take all the profitable trades simultaneously. This means that you can beat anyone who is keeping all their money in one coin. Looking at the numbers I couldn't believe it, so I checked my code. Turns out I was caculating profitability wrong. Fixing the bug I looked at profitability again. I found that you could make roughly a dollar a day off of nearly 100k moving through a single path of trades. Not the best return on investment. But what does this mean? It means that someone out there is already running an algorithm just like this and getting these trades in order to keep price balance. This normalizes prices across these markets. A final note about this. I found that you could make $1 a day off of a single route. I might be wrong on my calculations of required funds, as this is not the best code I've written, but what I do know is that there were at time of my research 93 coins on BTC and ETH, this means you have 93x2 routes on just this these two exchanges, which is a total of 186 possible routes to find trades on. That being said, the number of coins on these markets has likely increased, and this does not include the other markets which has a mulpicitive impact on the profitability of this method. Despite me abandoning this method it is very likely that you can find a reasonable ROI through this methodology. What did learn? I learned about websocket code, specifically how to structure a calculation so that you only do it when you need to in order to best optimize for performance. Within the context of websockets performance is a valuable thing. In other areas you can have bad performance, but here you really can't, as the real time nature of it is lost if write blocking code."
     }
   ]
 }
