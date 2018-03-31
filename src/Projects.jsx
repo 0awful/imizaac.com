@@ -22,19 +22,6 @@ const writeupStyleInvisible = {
   position: 'fixed',
   top: '50%',
   left: '50%',
-  /* bring your own prefixes */
-  transform: 'translate(-50%, -50%)'
-};
-
-const darkDivStyles = {
-  width: '100vf',
-  height: '100vf',
-
-  color: '000000',
-
-  position: 'fixed',
-  top: '50%',
-  left: '50%',
   transform: 'translate(-50%, -50%)'
 };
 
