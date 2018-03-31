@@ -3,18 +3,6 @@ import { Card, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 
-const cardStyles = {
-  width: '70%',
-
-  height: '80%',
-
-  position: 'fixed',
-  top: '50%',
-  left: '50%',
-  /* bring your own prefixes */
-  transform: 'translate(-50%, -50%)'
-};
-
 const toolbarStyles = {
   position: 'absolute',
   bottom: '0',
@@ -31,7 +19,7 @@ const groupStyles = {
 };
 
 const WriteupCard = props => (
-  <Card style={cardStyles} zDepth={3}>
+  <Card style={props.cardStyles} zDepth={3}>
     <CardTitle title={props.title} subtitle={props.subtitle} />
 
     <CardMedia />

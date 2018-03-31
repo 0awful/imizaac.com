@@ -4,12 +4,13 @@ import RaisedButton from 'material-ui/RaisedButton';
 import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 
 const cardStyles = {
-  display: 'inline-block',
   position: 'relative',
-  width: '30%',
+  //  width: '30%',
   minWidth: '400px',
-  height: '40%',
+  maxWidth: '400px',
+  //  height: '40%',
   minHeight: '500px',
+  maxHeight: '500px',
   float: 'left',
   margin: '1%'
 };

@@ -11,6 +11,30 @@ const style = {
   justifyContent: 'center'
 };
 
+const cardStylesVisible = {
+  width: '70%',
+  display: 'block',
+  height: '80%',
+
+  position: 'fixed',
+  top: '50%',
+  left: '50%',
+  /* bring your own prefixes */
+  transform: 'translate(-50%, -50%)'
+};
+
+const cardStylesInvisible = {
+  width: '70%',
+  display: 'none',
+  height: '80%',
+
+  position: 'fixed',
+  top: '50%',
+  left: '50%',
+  /* bring your own prefixes */
+  transform: 'translate(-50%, -50%)'
+};
+
 class Projects extends Component {
   state = {
     writeupDisplayed: false,
@@ -51,8 +75,8 @@ class Projects extends Component {
       return (
         <div style={style}>
           {this.returnProjects()}
-
           <WriteupCard
+            cardStyles={cardStylesVisible}
             title={project.title}
             subtitle={project.subtitle}
             description={project.description}
@@ -64,7 +88,25 @@ class Projects extends Component {
         </div>
       );
     } else {
-      return this.returnProjects();
+      let project = this.props.projects.find(
+        project => project.id === this.state.writeupId
+      );
+
+      return (
+        <div style={style}>
+          {this.returnProjects()}
+          <WriteupCard
+            cardStyles={cardStylesInvisible}
+            title={project.title}
+            subtitle={project.subtitle}
+            description={project.description}
+            writeup={project.writeup}
+            projecturl={project.url}
+            codeurl={project.codeurl}
+            backButton={this.toggleWriteupDisplay.bind(this)}
+          />
+        </div>
+      );
     }
   };
 }
