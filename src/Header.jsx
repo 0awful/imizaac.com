@@ -8,9 +8,13 @@ const undoLinkStyling = {
   color: 'inherit'
 };
 
+const headerStyles = {
+  marginBottom: '30px'
+};
+
 const Header = (props: { left: Function, history: Any }) => {
   return (
-    <div>
+    <div style={headerStyles}>
       <AppBar
         zDepth={3}
         style={{ position: 'fixed' }}

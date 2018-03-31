@@ -5,14 +5,13 @@ import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 
 const cardStyles = {
   position: 'relative',
-  //  width: '30%',
+
   minWidth: '400px',
-  maxWidth: '400px',
-  //  height: '40%',
+  maxWidth: '32%',
   minHeight: '500px',
   maxHeight: '500px',
-  float: 'left',
-  margin: '1%'
+
+  marginBottom: '15px'
 };
 
 const toolbarStyles = {

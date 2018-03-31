@@ -3,17 +3,20 @@ import { Component } from 'react';
 import ProjectCard from './ProjectCard.jsx';
 import WriteupCard from './WriteupCard.jsx';
 
-const style = {
-  paddingTop: '1%',
-  paddingLeft: '3%',
-  paddingRight: '3%',
-  alignItems: 'center',
-  justifyContent: 'center'
-};
-
-const cardStylesVisible = {
+const writeupStyleVisible = {
   width: '70%',
   display: 'block',
+  height: '80%',
+
+  position: 'fixed',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)'
+};
+
+const writeupStyleInvisible = {
+  width: '70%',
+  display: 'none',
   height: '80%',
 
   position: 'fixed',
@@ -23,15 +26,15 @@ const cardStylesVisible = {
   transform: 'translate(-50%, -50%)'
 };
 
-const cardStylesInvisible = {
-  width: '70%',
-  display: 'none',
-  height: '80%',
+const darkDivStyles = {
+  width: '100vf',
+  height: '100vf',
+
+  color: '000000',
 
   position: 'fixed',
   top: '50%',
   left: '50%',
-  /* bring your own prefixes */
   transform: 'translate(-50%, -50%)'
 };
 
@@ -54,7 +57,7 @@ class Projects extends Component {
   }
 
   returnProjects = () => (
-    <div style={style}>
+    <div id="projectGrid">
       {this.props.projects.map(project => (
         <ProjectCard
           key={project.id}
@@ -75,17 +78,18 @@ class Projects extends Component {
         project => project.id === this.state.writeupId
       );
     }
-    let cardStyle;
+    let writeupStyle;
     if (this.state.writeupDisplayed) {
-      cardStyle = cardStylesVisible;
+      writeupStyle = writeupStyleVisible;
     } else {
-      cardStyle = cardStylesInvisible;
+      writeupStyle = writeupStyleInvisible;
     }
     return (
-      <div style={style}>
+      <div>
         {this.returnProjects()}
+
         <WriteupCard
-          cardStyles={cardStyle}
+          cardStyles={writeupStyle}
           title={project.title}
           subtitle={project.subtitle}
           description={project.description}
