@@ -29,27 +29,52 @@ const groupStyles = {
   padding: '0px'
 };
 
-const ProjectCard = props => (
-  <Card style={cardStyles} zDepth={2}>
-    <CardTitle title={props.title} subtitle={props.subtitle} />
+const ProjectCard = props => {
+  let writeupButtonFunction = () => {
+    props.setId(props.id);
+    props.writeupFunction();
+  };
+  return (
+    <Card style={cardStyles} zDepth={2}>
+      <CardTitle title={props.title} subtitle={props.subtitle} />
 
-    <CardMedia />
-    <CardText>
-      {props.description}
-      <Toolbar style={toolbarStyles}>
-        <ToolbarGroup firstChild={true} style={groupStyles}>
-          <RaisedButton label="Code" primary={true} fullWidth={true} />
-        </ToolbarGroup>
+      <CardMedia />
+      <CardText>
+        {props.description}
+        <Toolbar style={toolbarStyles}>
+          <ToolbarGroup firstChild={true} style={groupStyles}>
+            <RaisedButton
+              label="Writeup"
+              primary={true}
+              fullWidth={true}
+              onClick={writeupButtonFunction}
+            />
+          </ToolbarGroup>
 
-        <ToolbarGroup style={groupStyles}>
-          <RaisedButton label="Writeup" primary={true} fullWidth={true} />
-        </ToolbarGroup>
-        <ToolbarGroup lastChild={true} style={groupStyles}>
-          <RaisedButton label="Project" primary={true} fullWidth={true} />
-        </ToolbarGroup>
-      </Toolbar>
-    </CardText>
-  </Card>
-);
+          <ToolbarGroup style={groupStyles}>
+            <RaisedButton
+              label="Code"
+              primary={true}
+              fullWidth={true}
+              onClick={() => {
+                window.location.href = props.codeurl;
+              }}
+            />
+          </ToolbarGroup>
+          <ToolbarGroup lastChild={true} style={groupStyles}>
+            <RaisedButton
+              label="Project"
+              primary={true}
+              fullWidth={true}
+              onClick={() => {
+                window.location.href = props.projecturl;
+              }}
+            />
+          </ToolbarGroup>
+        </Toolbar>
+      </CardText>
+    </Card>
+  );
+};
 
 export default ProjectCard;

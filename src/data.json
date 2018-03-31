@@ -2,21 +2,96 @@
   "projects": [
     {
       "title": "someTitle",
+      "subtitle": "this is the subtitle",
       "description": "description",
       "url": "URLWhereItIsHosted",
-      "githubURL": "githubURL",
-      "id": "idnumber",
+      "codeurl": "githubURL",
+      "id": "idnumber1",
       "writeup": "longWriteup"
     },
     {
       "title": "Shared Canvas",
-      "description":
+      "subtitle":
         "A online paint style app, where everyone has the same canvas to paint on",
-      "url": "Sharecanv.us",
-      "githubURL": "githubURL",
+      "description":
+        "Using HTML5 canvas, websockets, and jquery this app mimics MSPaint with the twist that all the users are using the same cnavas",
+      "url": "https://Sharedcanv.us",
+      "codeurl": "https://github.com/imizaac/SharedCanvas",
       "id": "sharedcanvas",
       "writeup":
         "From a technical standpoint it isn't super complex. A user has a canvas that they modify with jquery scripts. When they make a change to the canvas they send an update to the server that this server then passes on to the other clients. The timer is client side. The data is an key value pairing of randomly generated alphabetical keys that are both uppercase and lowercase with a total length of 4 digits. This leads to the chance of a collision being 1 in 52^4 or a really big number. Plannned updates: Room functionality, someone can create a room that they then have invite and admin priveges over. This allows for people to doodle with their friends and customize the settings of a room. The timer will move to server side. Athentication will be built out. Periodic wipes of rooms will happen along with periodic resets of the main canvas. Finally the canvas will be translated into an image format and provided to the users on first load rather than just being a data set that gets innefficiently sent over websockets"
+    },
+    {
+      "title": "someTitle",
+      "subtitle": "this is the subtitle",
+      "description": "description",
+      "url": "URLWhereItIsHosted",
+      "codeurl": "githubURL",
+      "id": "idnumber2",
+      "writeup": "longWriteup"
+    },
+    {
+      "title": "someTitle",
+      "subtitle": "this is the subtitle",
+      "description": "description",
+      "url": "URLWhereItIsHosted",
+      "codeurl": "githubURL",
+      "id": "idnumber3",
+      "writeup": "longWriteup"
+    },
+    {
+      "title": "someTitle",
+      "subtitle": "this is the subtitle",
+      "description": "description",
+      "url": "URLWhereItIsHosted",
+      "codeurl": "githubURL",
+      "id": "idnumber4",
+      "writeup": "longWriteup"
+    },
+    {
+      "title": "someTitle",
+      "subtitle": "this is the subtitle",
+      "description": "description",
+      "url": "URLWhereItIsHosted",
+      "codeurl": "githubURL",
+      "id": "idnumber5",
+      "writeup": "longWriteup"
+    },
+    {
+      "title": "someTitle",
+      "subtitle": "this is the subtitle",
+      "description": "description",
+      "url": "URLWhereItIsHosted",
+      "codeurl": "githubURL",
+      "id": "idnumber6",
+      "writeup": "longWriteup"
+    },
+    {
+      "title": "someTitle",
+      "subtitle": "this is the subtitle",
+      "description": "description",
+      "url": "URLWhereItIsHosted",
+      "codeurl": "githubURL",
+      "id": "idnumber7",
+      "writeup": "longWriteup"
+    },
+    {
+      "title": "someTitle",
+      "subtitle": "this is the subtitle",
+      "description": "description",
+      "url": "URLWhereItIsHosted",
+      "codeurl": "githubURL",
+      "id": "idnumber8",
+      "writeup": "longWriteup"
+    },
+    {
+      "title": "someTitle",
+      "subtitle": "this is the subtitle",
+      "description": "description",
+      "url": "URLWhereItIsHosted",
+      "codeurl": "githubURL",
+      "id": "idnumber9",
+      "writeup": "longWriteup"
     }
   ]
 }

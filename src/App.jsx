@@ -23,12 +23,9 @@ class App extends Component {
     } else {
       this.setState({ drawerOpen: true });
     }
-    console.log(this.state.drawerOpen);
   };
 
   render = () => {
-    console.log('app props', preload);
-    console.log('app passes', preload.projects);
     return (
       <MuiThemeProvider muiTheme={Theme}>
         <BrowserRouter>
