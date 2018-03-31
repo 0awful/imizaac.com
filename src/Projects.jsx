@@ -38,7 +38,7 @@ const cardStylesInvisible = {
 class Projects extends Component {
   state = {
     writeupDisplayed: false,
-    writeupId: 'idnumber6'
+    writeupId: ''
   };
 
   toggleWriteupDisplay() {
