@@ -67,11 +67,15 @@ class Projects extends Component {
   );
 
   render = () => {
-    if (this.state.writeupDisplayed) {
-      let project = this.props.projects.find(
+    let project;
+    if (this.state.writeupId === '') {
+      project = this.props.projects[0];
+    } else {
+      project = this.props.projects.find(
         project => project.id === this.state.writeupId
       );
-
+    }
+    if (this.state.writeupDisplayed) {
       return (
         <div style={style}>
           {this.returnProjects()}
@@ -88,10 +92,6 @@ class Projects extends Component {
         </div>
       );
     } else {
-      let project = this.props.projects.find(
-        project => project.id === this.state.writeupId
-      );
-
       return (
         <div style={style}>
           {this.returnProjects()}
