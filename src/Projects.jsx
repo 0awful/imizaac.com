@@ -94,31 +94,40 @@ class Projects extends Component {
         project => project.id === this.state.writeupId
       );
     }
-    let writeupStyle;
-    if (this.state.writeupDisplayed) {
-      writeupStyle = writeupStyleVisible;
-    } else {
-      writeupStyle = writeupStyleInvisible;
-    }
-    return (
-      <div>
-        <div id="container" style={containerStyle}>
-          <InquiriesCard style={InquiriesStyle} />
-        </div>
-        {this.returnProjects()}
 
-        <WriteupCard
-          cardStyles={writeupStyle}
-          title={project.title}
-          subtitle={project.subtitle}
-          description={project.description}
-          writeup={project.writeup}
-          projecturl={project.url}
-          codeurl={project.codeurl}
-          backButton={this.toggleWriteupDisplay.bind(this)}
-        />
-      </div>
-    );
+    if (this.props.inquiresOpen && this.state.writeupDisplayed) {
+      this.toggleWriteupDisplay();
+    }
+
+    if (this.props.inquiriesOpen) {
+      return (
+        <div>
+          <div id="container" style={containerStyle}>
+            <InquiriesCard
+              style={InquiriesStyle}
+              backButton={this.props.toggleInquiries}
+            />
+          </div>
+          {this.returnProjects()}
+        </div>
+      );
+    }
+
+    if (this.state.writeupDisplayed) {
+      return (
+        <div>
+          {this.returnProjects()}
+          <div id="container" style={containerStyle}>
+            <WriteupCard
+              cardStyles={writeupStyleVisible}
+              backButton={this.toggleWriteupDisplay.bind(this)}
+              {...project}
+            />
+          </div>
+        </div>
+      );
+    }
+    return <div>{this.returnProjects()}</div>;
   };
 }
 export default Projects;

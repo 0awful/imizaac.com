@@ -54,7 +54,7 @@ const WriteupCard = props => (
             primary={true}
             fullWidth={true}
             onClick={() => {
-              window.location.href = props.projecturl;
+              window.location.href = props.url;
             }}
           />
         </ToolbarGroup>

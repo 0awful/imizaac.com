@@ -13,15 +13,15 @@ import preload from './data.json';
 
 class App extends Component {
   state = {
-    writeupOpen: false
+    inquiriesOpen: false
   };
 
-  toggleWriteup = () => {
-    console.log(this.state.writeupOpen);
-    if (this.state.writeupOpen) {
-      this.setState({ writeupOpen: false });
+  toggleInquiries = () => {
+    console.log(this.state.inquiriesOpen);
+    if (this.state.inquiriesOpen) {
+      this.setState({ inquiriesOpen: false });
     } else {
-      this.setState({ writeupOpen: true });
+      this.setState({ inquiriesOpen: true });
     }
   };
 
@@ -30,8 +30,12 @@ class App extends Component {
       <MuiThemeProvider muiTheme={Theme}>
         <BrowserRouter>
           <div className="App">
-            <Header writeup={this.toggleWriteup} />
-            <MainRouter projects={preload.projects} />
+            <Header toggleInquiries={this.toggleInquiries} />
+            <MainRouter
+              projects={preload.projects}
+              inquiriesOpen={this.state.inquiriesOpen}
+              toggleInquiries={this.toggleInquiries}
+            />
           </div>
         </BrowserRouter>
       </MuiThemeProvider>

@@ -26,7 +26,7 @@ const Header = (props: { left: Function, history: Any }) => {
           </Link>
         }
         onLeftIconButtonClick={props.left}>
-        <EmailIcon click={props.writeup} />
+        <EmailIcon click={props.toggleInquiries} />
         <GithubLogo />
       </AppBar>
       <Toolbar />

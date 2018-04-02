@@ -11,6 +11,7 @@ const contactStyle = {
   display: 'grid',
   marginLeft: '20%',
   marginRight: '20%',
+  gridColumnGap: '4%',
   gridTemplateColumns: 'repeat(2,1fr)'
 };
 
@@ -27,11 +28,10 @@ let bodyFieldStyles = {
 };
 
 let buttonStyle = {
-  gridColumnStart: 2,
   gridRowStart: 5
 };
 
-const InquiriesCard = () => (
+const InquiriesCard = props => (
   <Paper style={paperStyle} zDepth={5}>
     <h1 style={{ textAlign: 'center', marginTop: '30px' }}>Email me</h1>
     <div id="contactGrid" style={contactStyle}>
@@ -53,7 +53,18 @@ const InquiriesCard = () => (
         rows={8}
       />
       <br />
-      <RaisedButton label="Send" primary={true} style={buttonStyle} />
+      <RaisedButton
+        label="Back"
+        primary={true}
+        style={buttonStyle}
+        onClick={props.backButton}
+      />
+      <RaisedButton
+        label="Send"
+        primary={true}
+        style={buttonStyle}
+        onClick={props.backButton}
+      />
     </div>
   </Paper>
 );
