@@ -5,7 +5,7 @@
       "subtitle": "An implementation of the Jaro-Winkler algorithm in Swift",
       "description":
         "It's a common algorithm, but when I needed it I couldn't find an example of it in Swift. I transcribed it into swift and then published my work on github and roseta code.",
-      "url": "URLWhereItIsHosted",
+      "projecturl": "URLWhereItIsHosted",
       "codeurl": "https://github.com/imizaac/SwiftJaroWinkler",
       "id": "SwiftJaroWinkler",
       "writeup":
@@ -17,7 +17,7 @@
         "A online paint style app, where everyone has the same canvas to paint on",
       "description":
         "Using HTML5 canvas, websockets, and jquery this app mimics MSPaint with the twist that all the users are using the same canvas",
-      "url": "https://Sharedcanv.us",
+      "projecturl": "https://sharedcanv.us",
       "codeurl": "https://github.com/imizaac/SharedCanvas",
       "id": "sharedcanvas",
       "writeup":
@@ -28,7 +28,7 @@
       "subtitle": "A collection of algorithms in swift",
       "description":
         "After I was given the recomendation to work on my algorithm skills I started work on serveral algorithms at leetcode.com",
-      "url": "URLWhereItIsHosted",
+      "projecturl": "URLWhereItIsHosted",
       "codeurl": "githubURL",
       "id": "BulkAlgorithms",
       "writeup":
@@ -39,7 +39,7 @@
       "subtitle": "This site and my experience with it",
       "description":
         "This site was an early project I had with React. It was through this project that I developed the comfort to start putting out my react work.",
-      "url": "https://www.imizaac.com",
+      "projecturl": "https://www.imizaac.com",
       "codeurl": "https://github.com/imizaac/imizaac.com",
       "id": "imizaac",
       "writeup":
@@ -50,7 +50,7 @@
       "subtitle": "An algorithm that automatically trades cryptocurrencies",
       "description":
         "An automated index fund build upon the binance cryptocurrency exchange. It allows for a user to automatically balance all of their funds to have the same monitary value",
-      "url": "https://github.com/imizaac/BinanceAutoTrader",
+      "projecturl": "https://github.com/imizaac/BinanceAutoTrader",
       "codeurl": "https://github.com/imizaac/BinanceAutoTrader",
       "id": "BinanceAutoTrade",
       "writeup":
@@ -61,7 +61,7 @@
       "subtitle": "Executing Real Time Arbitrage",
       "description":
         "Using websockets and monitoring numerous routes I try to make money from nothing",
-      "url": "https://github.com/imizaac/BinanceArbitrage/",
+      "projecturl": "https://github.com/imizaac/BinanceArbitrage/",
       "codeurl": "https://github.com/imizaac/BinanceArbitrage/",
       "id": "BinanceArbitrage",
       "writeup":

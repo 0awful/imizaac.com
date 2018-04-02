@@ -2,6 +2,8 @@ import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import { Link } from 'react-router-dom';
+import GithubLogo from './GithubLogo';
+import EmailIcon from './EmailIcon';
 
 const undoLinkStyling = {
   textDecoration: 'none',
@@ -11,11 +13,11 @@ const undoLinkStyling = {
 const headerStyles = {
   marginBottom: '30px'
 };
-
 const Header = (props: { left: Function, history: Any }) => {
   return (
     <div style={headerStyles}>
       <AppBar
+        iconElementLeft={<div />}
         zDepth={3}
         style={{ position: 'fixed' }}
         title={
@@ -23,8 +25,10 @@ const Header = (props: { left: Function, history: Any }) => {
             ImIzaac
           </Link>
         }
-        onLeftIconButtonClick={props.left}
-      />
+        onLeftIconButtonClick={props.left}>
+        <EmailIcon click={props.writeup} />
+        <GithubLogo />
+      </AppBar>
       <Toolbar />
     </div>
   );

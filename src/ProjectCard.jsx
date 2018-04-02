@@ -16,6 +16,12 @@ const cardStyles = {
 
 const toolbarStyles = {
   position: 'absolute',
+  display: 'grid',
+  paddingTop: '2%',
+  gridTemplateColumns: 'repeat(3,1fr)',
+  gridTemplateRows: 1,
+  gridColumnGap: '2%',
+  justifyContent: 'center',
   bottom: '0',
   left: '0',
   width: '100%',
@@ -42,35 +48,28 @@ const ProjectCard = props => {
       <CardText>
         {props.description}
         <Toolbar style={toolbarStyles}>
-          <ToolbarGroup firstChild={true} style={groupStyles}>
-            <RaisedButton
-              label="Writeup"
-              primary={true}
-              fullWidth={true}
-              onClick={writeupButtonFunction}
-            />
-          </ToolbarGroup>
-
-          <ToolbarGroup style={groupStyles}>
-            <RaisedButton
-              label="Code"
-              primary={true}
-              fullWidth={true}
-              onClick={() => {
-                window.location.href = props.codeurl;
-              }}
-            />
-          </ToolbarGroup>
-          <ToolbarGroup lastChild={true} style={groupStyles}>
-            <RaisedButton
-              label="Project"
-              primary={true}
-              fullWidth={true}
-              onClick={() => {
-                window.location.href = props.projecturl;
-              }}
-            />
-          </ToolbarGroup>
+          <RaisedButton
+            label="Writeup"
+            primary={true}
+            fullWidth={true}
+            onClick={writeupButtonFunction}
+          />
+          <RaisedButton
+            label="Code"
+            primary={true}
+            fullWidth={true}
+            onClick={() => {
+              window.location.href = props.codeurl;
+            }}
+          />
+          <RaisedButton
+            label="Project"
+            primary={true}
+            fullWidth={true}
+            onClick={() => {
+              window.location.href = props.projecturl;
+            }}
+          />
         </Toolbar>
       </CardText>
     </Card>

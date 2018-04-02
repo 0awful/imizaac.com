@@ -6,22 +6,22 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import './App.css';
 
-import Drawer from './Drawer.jsx';
-import Header from './Header.jsx';
+import Header from './Header';
 import MainRouter from './MainRouter';
 import Theme from './Theme';
 import preload from './data.json';
 
 class App extends Component {
   state = {
-    drawerOpen: false
+    writeupOpen: false
   };
 
-  toggleDrawer = () => {
-    if (this.state.drawerOpen) {
-      this.setState({ drawerOpen: false });
+  toggleWriteup = () => {
+    console.log(this.state.writeupOpen);
+    if (this.state.writeupOpen) {
+      this.setState({ writeupOpen: false });
     } else {
-      this.setState({ drawerOpen: true });
+      this.setState({ writeupOpen: true });
     }
   };
 
@@ -30,8 +30,7 @@ class App extends Component {
       <MuiThemeProvider muiTheme={Theme}>
         <BrowserRouter>
           <div className="App">
-            <Header title={this.redirect} left={this.toggleDrawer} />
-            <Drawer open={this.state.drawerOpen} toggle={this.toggleDrawer} />
+            <Header writeup={this.toggleWriteup} />
             <MainRouter projects={preload.projects} />
           </div>
         </BrowserRouter>

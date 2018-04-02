@@ -1,7 +1,8 @@
 import React from 'react';
 import { Component } from 'react';
-import ProjectCard from './ProjectCard.jsx';
-import WriteupCard from './WriteupCard.jsx';
+import ProjectCard from './ProjectCard';
+import WriteupCard from './WriteupCard';
+import InquiriesCard from './InquiriesCard';
 
 const writeupStyleVisible = {
   width: '70%',
@@ -25,6 +26,33 @@ const writeupStyleInvisible = {
   transform: 'translate(-50%, -50%)'
 };
 
+const containerStyle = {
+  position: 'absolute',
+  left: 0,
+  top: 0,
+  zIndex: 2,
+  width: '100vw',
+  height: '100vh',
+  display: 'grid',
+  paddingTop: '7%',
+  paddingLeft: '30%',
+  paddingRight: '30%',
+  paddingBottom: '20%',
+  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  gridTemplateColumns: '1'
+};
+
+const InquiriesStyle = {
+  width: '70%',
+  display: 'block',
+  height: '80%',
+
+  position: 'fixed',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)'
+};
+
 class Projects extends Component {
   state = {
     writeupDisplayed: false,
@@ -40,6 +68,7 @@ class Projects extends Component {
   }
 
   setWriteupId(id) {
+    console.log('clicked');
     this.setState({ writeupId: id });
   }
 
@@ -73,6 +102,9 @@ class Projects extends Component {
     }
     return (
       <div>
+        <div id="container" style={containerStyle}>
+          <InquiriesCard style={InquiriesStyle} />
+        </div>
         {this.returnProjects()}
 
         <WriteupCard
